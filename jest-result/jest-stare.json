@@ -1,0 +1,9 @@
+{
+  "additionalResultsProcessors": [],
+  "resultDir": "jest-result/",
+  "reportTitle": "单元测试结果展示",
+  "jestStareConfigJson": "jest-stare.json",
+  "coverageLink": "./lcov-report/index.html",
+  "resultHtml": "index.html",
+  "resultJson": "jest-results.json"
+}

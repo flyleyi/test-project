@@ -1,0 +1,15 @@
+{
+    "apps" : [{
+        "name": "mutilwap",
+        "max_memory_restart": "1024M",
+        "log_date_format": "YYYY-MM-DD HH:mm:ss",
+        "merge_logs": true,
+        "script": "./server/index.js",
+        "out_file": "./logs/mutilwap.log",
+        "error_file": "./logs/mutilwap_error.log",
+        "instances": 1,
+        "exec_mode": "cluster",
+        "watch":false,
+        "env": { "NODE_ENV": "production", "PORT": 8990, "BASE_URL": "/wap/" }
+    }]
+}

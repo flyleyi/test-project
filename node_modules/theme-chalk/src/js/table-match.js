@@ -1,0 +1,1 @@
+import '../table-match.scss'

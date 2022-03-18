@@ -1,0 +1,77 @@
+/******三角箭头**********/
+/**箭头方向  L👈  R👉 T👆 B👇**/
+/**调用方式  .triangle(T,10px,red) **/
+.triangle-init(@width) {
+  width: 0;
+  height: 0;
+  border-width: @width;
+  border-style: solid;
+  border-color: transparent;
+}
+.triangle(R,@width:10px,@color:red) {
+  .triangle-init(@width);
+  border-left-color: @color;
+}
+.triangle(L,@width:10px,@color:red) {
+  .triangle-init(@width);
+  border-right-color: @color;
+}
+.triangle(B,@width:10px,@color:red) {
+  .triangle-init(@width);
+  border-top-color: @color;
+}
+.triangle(T,@width:10px,@color:red) {
+  .triangle-init(@width);
+  border-bottom-color: @color;
+}
+
+/**移动端0.5px边框**/
+.border-init(@color) {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 1px;
+  height: 1px;
+  background-color: @color;
+}
+.border(T,@color:@border) {
+  &::before {
+    .border-init(@color);
+    bottom: inherit;
+    width: 100%;
+    transform: scale(1, 0.5);
+  }
+}
+.border(B,@color:@border) {
+  &::before {
+    .border-init(@color);
+    top: inherit;
+    width: 100%;
+    transform: scale(1, 0.5);
+  }
+}
+.border(L,@color:@border) {
+  &::before {
+    .border-init(@color);
+    right: inherit;
+    height: 100%;
+    transform: scale(0.5, 1);
+  }
+}
+.border(R,@color:@border) {
+  &::before {
+    .border-init(@color);
+    left: inherit;
+    height: 100%;
+    transform: scale(0.5, 1);
+  }
+}
+/**设置多行文本超出隐藏**/
+.ellipsis-lines(@n:2) {
+  display: -webkit-box; //将元素设为盒子伸缩模型显示
+  -webkit-box-orient: vertical; //伸缩方向设为垂直方向
+  -webkit-line-clamp: @n; //超出3行隐藏，并显示省略号
+}

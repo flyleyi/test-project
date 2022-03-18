@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([["bta-not-found"],{"504b":function(n,t,o){"use strict";o.r(t);var e={name:"NotFound"},a=o("2877"),u=Object(a.a)(e,(function(){var n=this,t=n.$createElement;return(n._self._c||t)("div",{staticClass:"app-container not-found"},[n._v(" NotFound ")])}),[],!1,null,null,null);t.default=u.exports}}]);
+//# sourceMappingURL=bta-not-found.5786c83b.js.map
